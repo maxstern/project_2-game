@@ -1,0 +1,24 @@
+<% include ./partials/bp_top %>
+
+<div class="book-container">
+  <div class="book">
+      <div class="meta">
+          <span class="isbn">ISBN: <%= book.isbn %></span>
+
+          <h2 class="title">Title: <%= book.title %></h2>
+
+          <h3 class="subtitle">Subtitle: <%= book.subtitle %></h3>
+
+          <h2 class="author">Author: <%= book.author %></h2>
+
+          <p class="description">Description: <%= book.description %></p>
+
+          <h5 class="pageCount">Page Count: <%= book.pages %></h5>
+
+          <img class="coverImg" src='<%= book.thumbnail %>'>
+      </div>
+  </div>
+</div>
+
+
+<% include ./partials/bp_bottom %>

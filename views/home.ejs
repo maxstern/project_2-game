@@ -1,0 +1,18 @@
+<% include ./partials/bp_top %>
+
+
+
+<h1>Book Searcher</h1>
+
+
+<form method="GET" action="/books/search">
+  <input type="text" name="q" placeholder="Search Books" />
+  <input type="submit" value="search" />
+</form>
+
+
+<div id="results"></div>
+
+
+
+<% include ./partials/bp_bottom %>

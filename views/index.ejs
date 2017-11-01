@@ -1,0 +1,43 @@
+<% include ./partials/bp_top %>
+
+<h1>Index</h1>
+
+<div class="book-container">
+    <% book.forEach(book => { %>
+        <div class="book">
+            <div class="meta">
+                <span class="ID">#: <%= book.id %></span>
+                <br>
+                <span class="title">Title: <%= book.title %></span>
+                <br>
+                <span class="author">Author: <%= book.author %></span>
+                <br>
+                <span class="isbn">ISBN: <%= book.isbn %></span>
+                <br>
+                <span class="pages">Pages: <%= book.pages %></span>
+                <br>
+
+
+
+                <form method="post" action="/books/<%= book.id %>?_method=DELETE">
+                    <button type="submit">Delete</button>
+                </form>
+
+                <form method="get" action="/books/info/<%= book.id %>">
+                    <button type="submit">More Info</button>
+                </form>
+
+                <br><br>
+
+
+
+
+            </div>
+        </div>
+    <% }) %>
+</div>
+
+
+<% include ./partials/bp_bottom %>
+
+

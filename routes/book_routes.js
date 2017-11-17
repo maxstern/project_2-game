@@ -7,6 +7,7 @@ const bookController = require('../controllers/book_controller.js');
 // Show all books
 bookRoutes.get('/',bookController.index);
 
+
 // Search for a book (via API)
 bookRoutes.get('/search', bookController.search);
 
@@ -21,6 +22,8 @@ bookRoutes.get('/:id', bookController.show);
 
 // Add book from API to DB
 bookRoutes.post('/', bookController.create);
+
+
 
 
 

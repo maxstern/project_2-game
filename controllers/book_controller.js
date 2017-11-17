@@ -28,7 +28,6 @@ bookController.show = (req, res) => {
 
 
 
-
 bookController.info = (req, res) => {
   Books.findById(req.params.id).then((book) => {
     //console.log(book)
@@ -43,7 +42,18 @@ bookController.info = (req, res) => {
 bookController.search = (req, res) => {
   bookSearch(req.query.q).then((searchbooks) => {
     //console.log(searchbooks)
-    res.render('results', {searchbooks: searchbooks});
+    res.render('results2', {searchbooks: searchbooks});
+  }).catch((err) => {
+      console.log(err)
+      res.status(500).json(err)
+  })
+};
+
+
+bookController.displaytest = (req, res) => {
+  bookSearch(req.query.q).then((searchbooks) => {
+    //console.log(searchbooks)
+    res.render('results2', {searchbooks: searchbooks});
   }).catch((err) => {
       console.log(err)
       res.status(500).json(err)
